@@ -1,0 +1,47 @@
+body {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    font-family: Calibri, monospace;
+}
+
+/* Custom container */
+.container-narrow {
+    margin-left: 11%;
+    max-width: 700px;
+}
+
+/* Custom container */
+.container-index {
+    margin: 0 auto;
+    max-width: 700px;
+}
+
+.container-index > hr {
+    margin: 30px 0;
+}
+/* Main marketing message and sign up button */
+.jumbotron {
+    margin: 60px 0;
+    text-align: center;
+}
+.jumbotron h1 {
+    font-size: 72px;
+    line-height: 1;
+}
+.jumbotron .btn {
+    font-size: 21px;
+    padding: 14px 24px;
+}
+
+.help-inline{
+    color: red;
+    font-weight: normal;
+    font-size: 0.6em;
+}
+
+.error {
+    color: red;
+    font-size: 1.0em;
+    font-weight: 100;
+    letter-spacing: 1px;
+}

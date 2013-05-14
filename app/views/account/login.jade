@@ -1,0 +1,36 @@
+extends ../layout
+block content
+    div.container-narrow
+        div.row
+            div.span4.offset4.well
+                h3 Sign into Red Seal
+                    br
+                    form(method="post")#signin-form
+                        div.control-group
+                            label.control-label Username:
+                            div.controls
+                                input(type="text",class="span4", data-validate="{required: true, email:true, messages:{required:'Please enter a valid email address', email:'Please enter a valid email address'}}", name="email", id="email",placeholder="Email address.." ,autocomplete="off")
+                                - if(typeof(error) != 'undefined')
+                                    - if(error == "user-invalid")
+                                        span.help-inline Invalid username or password. Please try again.
+                        div.control-group
+                            label.control-label Password:
+                            div.controls
+                                input(type="password",class="span4", data-validate="{required: true, messages:{required:'Please enter a valid password'}}", name="password", id="password",placeholder="Password.." ,autocomplete="off")
+                        div.control-group
+                            div.controls
+                                label#remember-me.checkbox Remember Me
+                                    input(type="checkbox", checked='checked', name="remember_me", id="remember_me_yes")
+                        div.control-group
+                            div.controls
+                                button(type="submit",class="btn btn-block btn-primary", value="Sign into account") Sign In
+                        div.control-group
+                            div.controls
+                                a(type="submit",class="btn btn-block btn-inverse", href="/") Cancel
+                p Recover your &nbsp;
+                    a(href="#modal-recover", class="link", data-toggle="modal") username or password
+                br
+                p Don't have an account? &nbsp;
+                    a(href="/register", class="link", data-toggle="modal") Register
+
+include ../modals/recover
